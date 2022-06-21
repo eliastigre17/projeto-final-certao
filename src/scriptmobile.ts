@@ -1,5 +1,5 @@
-const signUpMobileAnimator = document.querySelector("#signup-mobile-animator");
-const sectionSignIn = document.querySelector("#section-signIn");
+const signUpMobileAnimator = document.querySelector("#signup-mobile-animator") as HTMLButtonElement;
+const sectionSignIn = document.querySelector("#section-signIn") as HTMLButtonElement;
 
 signUpMobileAnimator.addEventListener("click", () => {
     sectionSignIn.style.cssText = `
@@ -9,7 +9,7 @@ signUpMobileAnimator.addEventListener("click", () => {
     `
 });
 
-const signInMobileAnimator = document.querySelector("#signin-mobile-animator");
+const signInMobileAnimator = document.querySelector("#signin-mobile-animator") as HTMLButtonElement;
 
 signInMobileAnimator.addEventListener("click", () => {
     sectionSignIn.style.cssText = `

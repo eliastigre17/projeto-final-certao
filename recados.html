@@ -1,17 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <section class="container-fluid h-100">
-        <div class="d-flex justify-content-center mt-3">
-            <h1>Meus Recados</h1>
+    <div class="container h-100">
+      <div class="container">
+        <h1 class="fw-bolder fs-1 mt-3">Meus Recados</h1>
+        <div class="d-flex justify-content-center row">
+            <div class="container">
+                <form id="form" class="row mt-3 mb-2">
+                    <div class="col-12 col-md-3">
+                        <input id="descricao" class="form-control" type="text" placeholder="Descrição" />
+                    </div>
+                    <div class="col input-group mt-3 mt-md-0">
+                        <input id="detalhamento" class="form-control" type="text" placeholder="Detalhamento" />
+                        <button class="btn btn-primary" type="submit">Salvar</button>
+                    </div>
+                </form>
         </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <section class="row table-responsive mt-4">
+          <table id="table" class="text-center table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Detalhamento</th>
+                <th colspan="2">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <th scope="row">1</th>
+                <td class="col-2">
+                  <button class="text-light btn w-100 p-1 bg-success">
+                    Editar
+                  </button>
+                  <button id="deletarBtn" class="text-light btn p-1 w-100 mt-1 bg-danger">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="crud.js"></script>
+    <script src="./dist/script.js"></script>
   </body>
 </html>
